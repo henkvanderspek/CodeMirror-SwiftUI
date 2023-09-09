@@ -306,7 +306,7 @@
         readOnly: false,
         autoCloseBrackets: true,
         selectionPointer: true,
-        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        //gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         extraKeys: {
           "Cmd-F": "findPersistent",
           "Ctrl-Space": "autocomplete",
@@ -339,12 +339,20 @@
         editor.setOption("lineWrapping", wrapping);
       }
 
+      function SetLineNumbers(numbers) {
+        editor.setOption("lineNumbers", numbers);
+      }
+
       function SetReadOnly(readOnly) {
           editor.setOption("readOnly", readOnly);
       }
 
       function GetLineWrapping() {
         return editor.getOption("lineWrapping");
+      }
+
+      function GetLineNumbers() {
+        return editor.getOption("lineNumbers");
       }
 
       function SetIndentUnit(unit) {

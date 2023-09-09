@@ -172,6 +172,10 @@ extension CodeViewController {
     callJavascript(javascriptString: "SetLineWrapping(\(value));")
   }
   
+  func setLineNumbers(_ value: Bool) {
+    callJavascript(javascriptString: "SetLineNumbers(\(value));")
+  }
+
   func setFontSize(_ value: Int) {
     callJavascript(javascriptString: "SetFontSize(\(value));")
   }
